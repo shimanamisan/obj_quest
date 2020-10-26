@@ -1,0 +1,83 @@
+// font-sizeやcolor inputなどを共通化しておく。
+html,
+body {
+  -webkit-overflow-scrolling: touch;
+  background-color: #000;
+  display: block;
+  width: 100%;
+  font-size: 14px;
+  color: #fff;
+  font-family: $font-family-base;
+  line-height: 1.6;
+  text-size-adjust: 100%; // スマホを横向きにしたときのフォントの拡大を防ぐ（親要素のフォントサイズに対する割合にしている）
+  letter-spacing: 0.1em;
+}
+
+p,
+a {
+  -webkit-font-smoothing: antialiased; // フォントを見やすくさせる
+}
+
+a {
+//   color: $font-color_primary;
+  text-decoration: none;
+  outline: none;
+  transition: .3s;
+}
+
+a:hover {
+  cursor: pointer;
+  transition: .3s;
+}
+
+img {
+  width: 100%;
+  vertical-align: bottom; // imgタグに入る余白を消す
+}
+
+input {
+  border: 1px solid #000;
+}
+
+*,
+:after,
+:before {
+  box-sizing: inherit; // 親要素の値を継承する
+}
+
+main {
+  display: block;
+}
+
+br {
+  display: none;
+  @include mq(md) {
+    display: block;
+  }
+}
+
+table {
+  border-collapse: collapse; // 隣接するボーダーを重ねて表示する
+  font-size: 100%;
+  border-spacing: 0;
+}
+
+// 親のフォントを継承する
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+}
+
+input{
+  padding: 0;
+  border: none;
+  outline: none;
+  background-color: #000;
+  color: #fff;
+  &:hover{
+    cursor: pointer;
+  }
+}

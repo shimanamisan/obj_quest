@@ -1,0 +1,10 @@
+.p-monster {
+  width: 100%;
+  &__inner {
+    margin: 0 auto;
+    padding-top: 48px;
+    padding-bottom: 40px;
+    width: 250px;
+    height: 250px;
+  }
+}

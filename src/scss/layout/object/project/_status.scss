@@ -1,0 +1,29 @@
+.p-status {
+  border: 2px solid #fff;
+  padding: 16px 24px;
+  &__name {
+    display: flex;
+    margin-top: -24px;
+    & > li {
+      background: #000;
+      width: 15%;
+      margin: 0 8px;
+      padding: 0 8px;
+      text-align: center;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80px;
+    text-align: center;
+    padding-top: 16px;
+    padding-left: 24px;
+  }
+  &__item {
+    margin-right: 8px;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+  }
+}
