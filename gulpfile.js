@@ -146,8 +146,8 @@ const php_serve = function () {
       base: "./dist/",
       livereload: true,
       port: 8001,
-      bin: "C:/xampp/php/php.exe",
-      ini: "C:/xampp/php/php.ini",
+      // bin: "C:/xampp/php/php.exe",
+      // ini: "C:/xampp/php/php.ini",
     },
     function () {
       browserSync.init({

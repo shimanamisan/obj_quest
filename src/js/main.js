@@ -1,5 +1,12 @@
 const $ = require("jquery");
 
 $(function(){
-    console.log('jQueryを読み込んでいます。。。')
+    let $history = $('.u-js-history');
+    console.log($history)
+    setTimeout(()=>{
+        $history.each(function(i){
+            $(this).delay(200 * i).animate({opacity:1}, 500)
+        })
+    }, 1000)
+
 })
