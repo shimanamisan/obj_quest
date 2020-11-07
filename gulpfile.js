@@ -146,8 +146,6 @@ const php_serve = function () {
       base: "./dist/",
       livereload: true,
       port: 8001,
-      // bin: "C:/xampp/php/php.exe",
-      // ini: "C:/xampp/php/php.ini",
     },
     function () {
       browserSync.init({
@@ -156,15 +154,15 @@ const php_serve = function () {
       });
     }
   );
+  // ファイルが更新（ビルド）されたらリロードする
+  gulp.watch(paths.dstDir + "/js/*.js").on("change", browserSync.reload);
+  gulp.watch(paths.dstDir + "/css/*.css").on("change", browserSync.reload);
 
   // 監視するタスク
   gulp.watch(paths.srcDir + "/js/*.js", gulp.series(js_Build));
   gulp.watch(paths.srcDir + "/scss/**/*.scss", gulp.series(sass_Build));
   gulp.watch(paths.srcDir + "/img", gulp.series(img_Build));
 
-  // ファイルが更新（ビルド）されたらリロードする
-  gulp.watch(paths.dstDir + "/js/*.js").on("change", browserSync.reload);
-  gulp.watch(paths.dstDir + "/css/*.css").on("change", browserSync.reload);
 
   gulp.watch("./dist/*.html").on("change", browserSync.reload);
   gulp.watch("./dist/*.php").on("change", browserSync.reload);

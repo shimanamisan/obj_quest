@@ -1,0 +1,20 @@
+.p-history {
+  border: 2px solid #fff;
+  padding: 16px 24px;
+  width: 70%;
+  position: relative;
+  &__btn {
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    &:hover {
+      cursor: pointer;
+    }
+    &:focus {
+      outline: 0;
+    }
+  }
+}

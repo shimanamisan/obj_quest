@@ -1,0 +1,38 @@
+.c-anime {
+  &__img {
+    position: relative;
+    animation: imgDown 5s forwards;
+  }
+  &__text {
+    position: relative;
+    animation: textUp 5s forwards;
+  }
+}
+
+@keyframes imgDown {
+  0% {
+    opacity: 0;
+    top: -400px;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0.5;
+    top: 0px;
+  }
+}
+
+@keyframes textUp {
+  0% {
+    opacity: 0;
+    top: 300px;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0.5;
+    top: 0px;
+  }
+}
