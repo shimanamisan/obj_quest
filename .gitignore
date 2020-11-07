@@ -7,3 +7,4 @@ debug.log
 /dist/img
 /dist/php.log
 /dist/.DS_Store
+.DS_Store
