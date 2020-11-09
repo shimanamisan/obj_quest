@@ -34,7 +34,7 @@ if (!empty($_POST)) {
           
           <div class="l-main__start">
             <div class="c-anime__img">
-              <img src="https://placehold.jp/400x150.png" alt="">
+              <img src="img/top_logo.png" alt="">
             </div>
   
             <form action="" method="post" id="js-start" class="c-anime__text">

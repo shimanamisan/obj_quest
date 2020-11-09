@@ -4,7 +4,6 @@ package-lock.json
 debug.log
 /dist/css
 /dist/js
-/dist/img
 /dist/php.log
 /dist/.DS_Store
 .DS_Store
