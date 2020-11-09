@@ -1,37 +1,42 @@
 .p-attack {
-  border: 2px solid #fff;
-  padding: 16px 24px;
-  width: 30%;
-  margin-right: 32px;
-  &__list {
-    & > li {
-      margin: 0px auto 24px;
-      width: 50%;
-      position: relative;
-      &:last-child {
-        margin-bottom: 0px;
-      }
-    }
-  }
-  &__text {
-    &::before {
-      position: absolute;
-      top: 5px;
-      left: -20px;
-      content: "";
-      display: block;
-      opacity: 0;
-      height: 0px;
-      width: 0px;
-      border: 6px solid #fff;
-      border-color: transparent;
-      border-left-color: #fff;
-    }
-    &:hover {
-      &::before {
-        opacity: 1;
-      }
-      cursor: pointer;
-    }
-  }
+	border: 2px solid #fff;
+	padding: 16px 24px;
+	width: 30%;
+	margin-right: 32px;
+	@include mq() {
+		width: 40%;
+		padding: 16px 8px;
+		margin-right: 16px;
+	}
+	&__list {
+		& > li {
+			margin: 0px auto 24px;
+			width: 50%;
+			position: relative;
+			&:last-child {
+				margin-bottom: 0px;
+			}
+		}
+	}
+	&__text {
+		&::before {
+			position: absolute;
+			top: 5px;
+			left: -20px;
+			content: "";
+			display: block;
+			opacity: 0;
+			height: 0px;
+			width: 0px;
+			border: 6px solid #fff;
+			border-color: transparent;
+			border-left-color: #fff;
+		}
+		&:hover {
+			&::before {
+				opacity: 1;
+			}
+			cursor: pointer;
+		}
+	}
 }

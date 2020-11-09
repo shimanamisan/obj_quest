@@ -1,31 +1,36 @@
 .p-social {
-  opacity: 0;
-  border: #fff solid 2px;
-  background-color: #000;
-  min-height: 50%;
-  min-width: 80%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  position: absolute;
-  box-sizing: border-box;
-  z-index: -1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+	opacity: 0;
+	border: #fff solid 2px;
+	background-color: #000;
+	min-height: 50%;
+	min-width: 80%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	position: absolute;
+	box-sizing: border-box;
+	z-index: -1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
 
-  &__title {
-    margin-bottom: 48px;
-    font-size: 30px;
-  }
-  &__text {
-    margin-bottom: 48px;
-  }
-  &__btn {
-    margin-bottom: 48px;
-  }
-  &__link {
-    margin-top: 24px;
-  }
+	&__title {
+		margin-bottom: 48px;
+		font-size: 30px;
+	}
+	&__text {
+		margin-bottom: 48px;
+	}
+	&__btn {
+		margin-bottom: 48px;
+	}
+	&__link {
+		margin-top: 24px;
+	}
+	&__view {
+		@include mq() {
+			padding: 8px;
+		}
+	}
 }

@@ -1,0 +1,17 @@
+# .htaccessファイル自体をアクセス禁止にする
+<Files ~ "^\.ht">
+deny from all
+</Files>
+
+# index.phpのファイル表示を非表示にする
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+
+<IfModule "%{HTTP_HOST} == 'obj-quest.shimanamisan.com/'">
+# 本番環境のホストならHTTPSへリダイレクトさせる
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+</IfModule>

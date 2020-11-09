@@ -1,10 +1,20 @@
 .p-monster {
-  width: 100%;
-  &__inner {
-    margin: 0 auto;
-    padding-top: 48px;
-    padding-bottom: 40px;
-    width: 250px;
-    height: 250px;
-  }
+	width: 100%;
+	@include mq() {
+		margin: 0 auto;
+		padding: 8px;
+		width: 200px;
+	}
+	&__inner {
+		margin: 0 auto;
+		padding-top: 48px;
+		padding-bottom: 40px;
+		width: 250px;
+		height: 250px;
+		@include mq() {
+			width: 100%;
+			height: 100%;
+			padding: 8px;
+		}
+	}
 }

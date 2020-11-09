@@ -1,38 +1,74 @@
 .c-anime {
-  &__img {
-    position: relative;
-    animation: imgDown 5s forwards;
-  }
-  &__text {
-    position: relative;
-    animation: textUp 5s forwards;
-  }
+	&__img {
+		position: relative;
+		animation: imgDown 5s forwards;
+		@include mq() {
+			padding: 0 8px;
+			box-sizing: border-box;
+			animation: imgDown414 5s forwards;
+		}
+	}
+	&__text {
+		position: relative;
+		animation: textUp 5s forwards;
+		@include mq() {
+			animation: textUP414 5s forwards;
+		}
+	}
 }
 
 @keyframes imgDown {
-  0% {
-    opacity: 0;
-    top: -400px;
-  }
-  50% {
-    opacity: 0.2;
-  }
-  100% {
-    opacity: 0.5;
-    top: 0px;
-  }
+	0% {
+		opacity: 0;
+		top: -400px;
+	}
+	50% {
+		opacity: 0.2;
+	}
+	100% {
+		opacity: 0.5;
+		top: 0px;
+	}
 }
 
 @keyframes textUp {
-  0% {
-    opacity: 0;
-    top: 300px;
-  }
-  50% {
-    opacity: 0.2;
-  }
-  100% {
-    opacity: 0.5;
-    top: 0px;
-  }
+	0% {
+		opacity: 0;
+		top: 300px;
+	}
+	50% {
+		opacity: 0.2;
+	}
+	100% {
+		opacity: 0.5;
+		top: 0px;
+	}
+}
+
+@keyframes imgDown414 {
+	0% {
+		opacity: 0;
+		top: -200px;
+	}
+	50% {
+		opacity: 0.2;
+	}
+	100% {
+		opacity: 0.5;
+		top: 300px;
+	}
+}
+
+@keyframes textUP414 {
+	0% {
+		opacity: 0;
+		top: 500px;
+	}
+	50% {
+		opacity: 0.2;
+	}
+	100% {
+		opacity: 0.5;
+		top: 300px;
+	}
 }

@@ -1,36 +1,40 @@
 .c-btn {
-  padding: 8px 16px;
-  box-sizing: border-box;
-  &:hover {
-    cursor: pointer;
-  }
-  &:focus {
-    outline: none;
-  }
-  &:first-child {
-    margin-right: 8px;
-  }
-  &__start {
-    position: relative;
-    margin-top: 40px;
-    &::before {
-      position: absolute;
-      top: 5px;
-      left: -20px;
-      content: "";
-      display: block;
-      opacity: 0;
-      height: 0px;
-      width: 0px;
-      border: 6px solid #fff;
-      border-color: transparent;
-      border-left-color: #fff;
-    }
-    &:hover {
-      &::before {
-        opacity: 1;
-      }
-      cursor: pointer;
-    }
-  }
+	padding: 8px 16px;
+	box-sizing: border-box;
+	&:hover {
+		cursor: pointer;
+	}
+	&:focus {
+		outline: none;
+	}
+	&:first-child {
+		margin-right: 8px;
+		@include mq() {
+			margin-right: 0px;
+			margin-bottom: 32px;
+		}
+	}
+	&__start {
+		position: relative;
+		margin-top: 40px;
+		&::before {
+			position: absolute;
+			top: 5px;
+			left: -20px;
+			content: "";
+			display: block;
+			opacity: 0;
+			height: 0px;
+			width: 0px;
+			border: 6px solid #fff;
+			border-color: transparent;
+			border-left-color: #fff;
+		}
+		&:hover {
+			&::before {
+				opacity: 1;
+			}
+			cursor: pointer;
+		}
+	}
 }

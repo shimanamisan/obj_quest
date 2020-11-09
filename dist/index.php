@@ -1,23 +1,21 @@
 <?php
-require("monster.php");
-require("function.php");
+require "monster.php";
+require "function.php";
 
 // POST送信されていた場合
 if (!empty($_POST)) {
-  
-    // ゲームスタートの判定
-    $startFlg = (!empty($_POST['start'])) ? true : false ;
+  // ゲームスタートの判定
+  $startFlg = !empty($_POST['start']) ? true : false;
 
-    debug("POST送信の中身" . print_r($_POST, true));
-    debug("SESSIONの中身" . print_r($_SESSION, true));
+  debug("POST送信の中身" . print_r($_POST, true));
+  debug("SESSIONの中身" . print_r($_SESSION, true));
 
-    if ($startFlg) {
-        init();
-        debug('ゲームがスタートしました。');
-        debug('   ');
-    }
+  if ($startFlg) {
+    init();
+    debug('ゲームがスタートしました。');
+    debug('   ');
+  }
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -52,20 +50,28 @@ if (!empty($_POST)) {
 
           <div class="p-status js-game-status">
             <ul class="p-status__name">
-              <li><?php echo sanitize($_SESSION['human']->getName());?></li>
+              <li><?php echo sanitize($_SESSION['human']->getName()); ?></li>
             </ul>
             <ul class="p-status__list">
               <li class="p-status__item">HP:</li>
-              <li class="p-status__item__num js-satus-hp"><?php echo sanitize($_SESSION['human']->getHp());?></li>
+              <li class="p-status__item__num js-satus-hp"><?php echo sanitize(
+                $_SESSION['human']->getHp()
+              ); ?></li>
               <li class="p-status__item">MP:</li>
-              <li class="p-status__item__num js-status-mp"><?php echo sanitize($_SESSION['human']->getMp());?></li>
+              <li class="p-status__item__num js-status-mp"><?php echo sanitize(
+                $_SESSION['human']->getMp()
+              ); ?></li>
               <li class="p-status__item">LV:</li>
-              <li class="p-status__item__num js-status-lv"><?php echo sanitize($_SESSION['human']->getLv());?></li>
+              <li class="p-status__item__num js-status-lv"><?php echo sanitize(
+                $_SESSION['human']->getLv()
+              ); ?></li>
             </ul>
           </div>
           <div class="p-monster">
             <div class="p-monster__inner">
-              <img src="<?php echo sanitize($_SESSION['monster']->getImg());?>"  class="js-monster-img" alt="">
+              <img src="<?php echo sanitize(
+                $_SESSION['monster']->getImg()
+              ); ?>"  class="js-monster-img" alt="">
             </div>
           </div>
           <div class="p-social js-social">
@@ -116,7 +122,9 @@ if (!empty($_POST)) {
                   <div class="p-history__text">
                     <div class="js-history">
                       
-                      <?php echo (!empty($_SESSION['history'])) ? $_SESSION['history'] : $_SESSION['monster']->getName()."が現れた！" ?>
+                      <?php echo !empty($_SESSION['history'])
+                        ? $_SESSION['history']
+                        : $_SESSION['monster']->getName() . "が現れた！"; ?>
                     
                     </div>
               </div>
