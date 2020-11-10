@@ -86,12 +86,8 @@ if (!empty($_POST)) {
                   たたかいの結果をツイートする
                 </p>
                 <div class="p-social__link">
-                  <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" 
-                    class="twitter-share-button" data-url="" data-size="large" data-lang="ja" 
-                    data-count="none" data-show-count="false" 
-                    data-hashtags="プログラミング学習,オブジェククエスト" 
-                    data-text="モンスターを倒しました！"></a>
-                  </div>
+                 <?php echo sanitize(History::linkGenerate()); ?>
+                </div>
               </div>
               <div class="p-social__btn">
                   <button class="c-btn js-top-btn">トップへ戻る</button>
@@ -101,22 +97,22 @@ if (!empty($_POST)) {
           </div>
           <div class="l-main__common">
             <div class="p-attack">
-            <form id="js-post">
-              <ul class="p-attack__list">
-                <li class="p-attack__text">
-                  <input class="p-attack__submit" id="js-attack" type="submit" name="attack" value="たたかう">
-                </li>
-                <li class="p-attack__text">
-                  <input class="p-attack__submit" id="js-magic" type="submit" name="magic_attack" value="まほう">
-                </li>
-                <li class="p-attack__text">
-                <input class="p-attack__submit" id="js-gard" type="submit" name="gard" value="ぼうぎょ">
-                </li>
-                <li class="p-attack__text">
-                <input class="p-attack__submit" id="js-escape" type="submit" name="escape" value="にげる">
-                </li>
-              </ul>
-            </form>
+              <form id="js-post">
+                <ul class="p-attack__list">
+                  <li class="p-attack__text">
+                    <input class="p-attack__submit" id="js-attack" type="submit" name="attack" value="たたかう">
+                  </li>
+                  <li class="p-attack__text">
+                    <input class="p-attack__submit" id="js-magic" type="submit" name="magic_attack" value="まほう">
+                  </li>
+                  <li class="p-attack__text">
+                  <input class="p-attack__submit" id="js-gard" type="submit" name="gard" value="ぼうぎょ">
+                  </li>
+                  <li class="p-attack__text">
+                  <input class="p-attack__submit" id="js-escape" type="submit" name="escape" value="にげる">
+                  </li>
+                </ul>
+              </form>
             </div>
             <div class="p-history">
                   <div class="p-history__text">

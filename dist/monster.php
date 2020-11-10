@@ -245,6 +245,7 @@ interface HistoryInterFace
 {
   public static function set($str);
   public static function clear();
+  public static function linkGenerate();
 }
 
 // 履歴管理クラス
@@ -263,6 +264,26 @@ class History implements HistoryInterFace
   public static function clear()
   {
     unset($_SESSION['history']);
+  }
+  public static function linkGenerate()
+  {
+    // index.phpを切り取る
+    $fullURL = $_SERVER["REQUEST_URI"];
+    $cutURL = mb_substr($fullURL, 0, -10);
+    // 現在のURLを取得
+    $URL =
+      (empty($_SERVER["HTTPS"]) ? "http://" : "https://") .
+      $_SERVER["HTTP_HOST"] .
+      $cutURL;
+
+    debug("現在のURLを取得しました。 ：" . $URL);
+
+    echo '<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" 
+    class="twitter-share-button" data-url=" '. $URL .'" data-size="large" data-lang="ja" 
+    data-count="none" data-show-count="false" 
+    data-hashtags="プログラミング学習,オブジェククエスト" 
+    data-text="オブジェクエストをプレイしました！"></a>';
+
   }
 }
 
